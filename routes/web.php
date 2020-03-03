@@ -19,10 +19,7 @@ Route::get('/', function () {
 Route::get('/hello1',function(){
     return("Hello");
 });
-Route::get('/hello',function(){
-    $someData = 'Hello From Route';
-    return view('hello.hello',compact('someData'));
-});
+Route::get('/hello','HelloController@index');
 Route::get('/hello2',function(){
     $someData='helo from hello2';
     return view('hello.hello2',[
